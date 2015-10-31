@@ -1,0 +1,29 @@
+<form name="loginForm" ng-submit="logIn(credentials)">
+  <label for="email">Email</label>
+  <input type="email"
+         name="email"
+         id="email"
+         ng-model="credentials.email"
+         placeholder='example@email.com'
+         ng-class="{'invalid': loginForm.email.$invalid &&
+           loginForm.$dirty}"
+         required/>
+  <label for="password">Password</label>
+  <input type="password"
+         name="password"
+         id="password"
+         ng-model="credentials.password"
+         placeholder="minimum 7 characters"
+         ng-class="{'invalid': loginForm.password.$invalid &&
+           loginForm.$dirty}"
+         ng-minlength="7"
+         required/>
+  <p class="error" ng-show="errLogin">{{errLogin}}</p>
+  <button ng-disabled="loginForm.$invalid || logging" type="submit">
+    Login
+    <i class="fa fa-spinner" ng-show="logging"></i>
+  </button>
+</form>
+<p class="auth-links">New to StartupRounds?
+  <a ui-sref="authentication.signup"> Sign up here.</a>
+</p>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Workshop Frontend">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Workshop Frontend</title>
+
+    <base href="<%= constants.appUrl %>">
+
+    <%# Path shortcuts to Google fonts %>
+    <% var gFonts = 'https://fonts.googleapis.com/css?family=';%>
+
+    <!-- Google Fonts -->
+    <link href="<%=gFonts%>Source+Sans+Pro:200,400,600,700"
+          rel="stylesheet"
+          type="text/css">
+    <!-- END Google Fonts -->
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="vendor-bower/font-awesome/css/font-awesome.min.css">
+
+    <!-- build:css style/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body ng-app="workshop-frontend">
+
+    <div ui-view></div>
+
+    <!-- build:js script/app.js -->
+    <!-- VENDOR BOWER -->
+    <script src="vendor-bower/angular/angular.js"></script>
+    <script src="vendor-bower/angular-ui-router/release/angular-ui-router.js">
+    </script>
+    <script src="vendor-bower/ng-lodash/build/ng-lodash.js"></script>
+    <script src="vendor-bower/ngstorage/ngStorage.js"></script>
+    <!-- MAIN APP -->
+    <script src="scripts/app.js"></script>
+    <!-- CONTROLLERS -->
+    <script src="scripts/controllers/auth/auth.js"></script>
+    <script src="scripts/controllers/auth/login.js"></script>
+    <script src="scripts/controllers/auth/page404.js"></script>
+    <script src="scripts/controllers/auth/signup.js"></script>
+    <!-- CONSTANTS -->
+    <script src="scripts/constants/constants.js"></script>
+    <!-- SERVICES -->
+    <script src="scripts/services/application.js"></script>
+    <script src="scripts/services/auth.js"></script>
+    <script src="scripts/services/session.js"></script>
+    <script src="scripts/services/user.js"></script>
+    <!-- endbuild -->
+
+    <script>
+      angular.module('workshop-frontend')
+      .constant('CONFIG', {
+        apiUrl: '<%= constants.apiUrl %>',
+        appUrl: '<%= constants.appUrl %>'
+      });
+    </script>
+  </body>
+</html>

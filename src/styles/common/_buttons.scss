@@ -1,0 +1,29 @@
+button {
+  border: 0;
+  outline: 0;
+}
+
+@mixin button ($background, $border, $color, $hover: false) {
+  background-color: $background;
+  border: 2px solid $border;
+  color: $color;
+  font-size: 1em;
+  transition: all $transition-duration;
+
+  &:hover {
+    background-color: if($hover, $hover, $color);
+    border-color: if($hover, $hover, $border);
+    color: $background-color;
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    background-color: $border-color;
+    border-color: $border-color;
+    color: $background-color;
+
+    .fa-spinner {
+      color: $background-color;
+    }
+  }
+}

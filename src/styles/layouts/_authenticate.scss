@@ -1,0 +1,108 @@
+.authenticate {
+  background-color: $button-color;
+  box-sizing: border-box;
+  color: $public-font-color;
+  display: table;
+  height: 0;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+
+    > div {
+      background-color: $background-color;
+      border-radius: 15px;
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 60px 30px;
+      width: 525px;
+    }
+  }
+
+  h1 {
+    color: $font-color;
+  }
+
+  a {
+    color: $public-event-color;
+    text-decoration: underline;
+    transition: all $transition-duration;
+
+    &:hover {
+      color: $clickable-color;
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  input {
+    @include inputs(100%, $light-border-color);
+    margin-bottom: 15px;
+    padding: 7px 14px;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  button {
+    @include button($auth-button-color,
+                    $auth-button-color,
+                    $background-color,
+                    $clickable-color);
+    font-weight: 600;
+    margin: 15px 0;
+    padding: 7px 0;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  strong {
+    color: $font-color;
+    display: block;
+    margin: 20px 0;
+  }
+
+  .pending {
+    color: $public-font-color;
+
+    i {
+      color: $clickable-color;
+    }
+  }
+
+  ul {
+    margin: 20px 0;
+    padding-left: 30px;
+    text-align: left;
+
+    li {
+      list-style-type: disc;
+      margin-bottom: 10px;
+    }
+  }
+
+  .auth-links {
+    margin-top: 30px;
+  }
+}
+
+.page-404 {
+  p {
+    &:first-child {
+      margin: 0 65px 65px;
+    }
+
+    &:last-child {
+      margin: 85px 50px 0;
+    }
+  }
+}

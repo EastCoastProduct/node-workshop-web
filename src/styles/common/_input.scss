@@ -1,0 +1,25 @@
+@mixin inputs ($width, $border: false) {
+  background-color: transparent;
+  border: 1px solid if($border, $border, $border-color);
+  box-sizing: border-box;
+  outline-color: $button-color;
+  transition: all $transition-duration;
+  width: $width;
+
+  &::placeholder {
+    color: $border-color;
+    font-style: italic;
+  }
+
+  &.invalid {
+    border-color: $error-color;
+    color: $error-color;
+    outline-color: $error-color;
+  }
+
+  &:disabled {
+    background-color: if($border, $border, $border-color);
+    border-color: if($border, $border, $border-color);
+    color: $background-color;
+  }
+}

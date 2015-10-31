@@ -1,0 +1,57 @@
+<form name="signupForm" ng-submit="signUp(credentials)">
+  <label for="email">Email</label>
+  <input type="email"
+         name="email"
+         id="email"
+         ng-model="credentials.email"
+         placeholder="example@email.com"
+         ng-class="{'invalid': signupForm.email.$invalid &&
+           signupForm.$dirty}"
+         required/>
+  <label for="first">First Name</label>
+  <input type="text"
+         name="first"
+         id="first"
+         placeholder="John"
+         ng-class="{'invalid': signupForm.first.$invalid &&
+           signupForm.$dirty}"
+         ng-model="credentials.name.first"
+         required/>
+  <label for="last">Last Name</label>
+  <input type="text"
+         name="last"
+         id="last"
+         placeholder="Doe"
+         ng-class="{'invalid': signupForm.last.$invalid &&
+           signupForm.$dirty}"
+         ng-model="credentials.name.last"
+         required/>
+  <label for="password">Password</label>
+  <input type="password"
+         name="password"
+         id="password"
+         placeholder="minimum 7 characters"
+         ng-class="{'invalid': signupForm.password.$invalid &&
+           signupForm.$dirty}"
+         ng-model="credentials.password"
+         ng-minlength="7"
+         required/>
+  <label for="confirm">Confirm Password</label>
+  <input type="password"
+         name="confirm"
+         id="confirm"
+         placeholder="repeat password"
+         ng-class="{'invalid': signupForm.confirm.$invalid &&
+           signupForm.$dirty}"
+         ng-model="passwordConfirm"
+         ng-disabled="signupForm.password.$invalid"
+         pw-check="credentials.password"/>
+  <p class="error" ng-show="errSignup">{{errSignup}}</p>
+  <button type="submit" ng-disabled="signupForm.$invalid || signing">
+    Sign up
+    <i class="fa fa-spinner" ng-show="signing"></i>
+  </button>
+</form>
+<p class="auth-links">Already have an account?
+  <a ui-sref="authentication.login"> Sign in here.</a>
+</p>

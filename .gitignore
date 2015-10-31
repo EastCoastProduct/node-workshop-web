@@ -1,0 +1,6 @@
+src/styles/main.css
+.DS_Store
+node_modules
+dist
+src/vendor-bower
+coverage/

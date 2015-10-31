@@ -1,0 +1,41 @@
+{
+  "name": "workshop-frontend",
+  "version": "0.0.1",
+  "authors": [
+    "East Coast Product"
+  ],
+  "dependencies": {
+    "del": "^1.2.0",
+    "ejs": "^2.3.3",
+    "express": "^4.13.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-copy": "0.0.2",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-eslint": "^0.15.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-karma": "git://github.com/lazd/gulp-karma#helper",
+    "gulp-nodemon": "^2.0.3",
+    "gulp-rev": "^5.1.0",
+    "gulp-rev-replace": "^0.4.2",
+    "gulp-sass": "^2.0.3",
+    "gulp-scss-lint": "^0.2.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-useref": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "http": "0.0.0",
+    "serve-static": "^1.10.0"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.37",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.4.2",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.6",
+    "karma-ng-html2js-preprocessor": "^0.1.2",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-safari-launcher": "^0.1.1",
+    "phantomjs": "^1.9.17"
+  }
+}

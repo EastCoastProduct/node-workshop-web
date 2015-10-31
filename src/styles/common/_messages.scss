@@ -1,0 +1,21 @@
+.error {
+  color: $error-color;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.success {
+  color: $clickable-color;
+}
+
+.info {
+  color: $border-color;
+}
+
+.error,
+.success,
+.info {
+  margin: 10px 0;
+}

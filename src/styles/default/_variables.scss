@@ -1,0 +1,18 @@
+// COLORS
+$auth-button-color: #3f4446;                          // cape cod (approx.)
+$background-color: #fff;                              // white
+$border-color: #bdbdbd;                               // silver (approx.)
+$button-color: #373e4b;                               // bright gray (approx.)
+$clickable-color: #03a688;                            // niagara (approx.)
+$error-color: #f00;                                   // red
+$font-color: #000;                                    // black
+$public-event-color: #005c88;                         // orient (approx.)
+$public-font-color: #636363;                          // dove gray (approx.)
+
+// CALCULATED COLORS
+$light-border-color: lighten($border-color, 16);      // mercury (approx.)
+
+// CONTENT
+$animation-duration: 2s;
+$content-width: 1000px;
+$transition-duration: .3s;
